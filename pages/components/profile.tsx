@@ -21,14 +21,12 @@ export default function Profile() {
                 <Text fontWeight="bold" fontSize="2xl">Product Designer and Developer, specialised in mobile app development.</Text>
                 <Flex direction={isNotSmallerScreen ? "row" : "column"} mt={8} >
                     <Flex rounded="xl" direction="column" mt={4} bg="blue.400" h="30vh" w="30vh" justify="flex-end">
-                        {/* <Icon color="white" p="4" as={DiAndroid} w="24" h="24" /> */}
                         <Text color="white" p="4" fontSize="xl" fontWeight="semibold">
                             Android Apps
                         </Text>
                     </Flex>
                     <Flex rounded="xl" direction="column" mt={4} ml={isNotSmallerScreen ? 4 : 0}
                         bg="gray.100" h="30vh" w="30vh" justify="flex-end" _hover={{ bg: "teal.400", }}>
-                        {/* <Icon color="black" p="4" as={DiCodeigniter} w="24" h="24" /> */}
                         <Text color="black" p="4" fontSize="xl" fontWeight="semibold">
                             Flutter Apps
                         </Text>
@@ -36,9 +34,7 @@ export default function Profile() {
                     <Flex rounded="xl" direction="column" mt={4} ml={isNotSmallerScreen ? 4 : 0}
                         bg="gray.100" h="30vh" w="30vh" justify="flex-end"
                         _hover={{ bg: "green.400", }}
-
                     >
-                        {/* <Icon as={DiWebplatform} p="4" w="24" h="24" color="black" /> */}
                         <Text color="black" p="4" fontSize="xl" fontWeight="semibold">
                             Web Apps
                         </Text>

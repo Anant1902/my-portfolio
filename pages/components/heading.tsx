@@ -15,7 +15,7 @@ export default function Heading() {
             <Flex direction={isNotSmallerScreen ? "row" : "column"} width="full"
                 p={isNotSmallerScreen ? "32" :"0"}
                 alignSelf="flex-start">
-                <Box mt={isNotSmallerScreen ? "0" : 16} alignContent='flex-start' width='60%'>
+                <Box mt={isNotSmallerScreen ? "0" : 16} alignContent='flex-start' width={isNotSmallerScreen ? '60%' : '100%'}>
                     <Text fontSize="7xl" fontWeight="semibold" bgGradient="linear(to-r, cyan.400, blue.500, purple.600)" bgClip="text">Anant Shanker</Text>
                     {/* <Text color={isDark ? "gray.200" : "gray.500"}>Year 2 Computer Science student at NUS</Text> */}
                     <Text fontSize="2xl">
