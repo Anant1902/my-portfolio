@@ -5,14 +5,9 @@ import MyApp from './components/MyApp';
 
 export default function Home() {
   return (
-    <StrictMode>
-      <ThemeProvider theme="">
-        <CSSReset />
-        <ChakraProvider>
+      <ChakraProvider>
           <ColorModeScript initialColorMode="dark"></ColorModeScript>
           <MyApp />
-        </ChakraProvider>
-      </ThemeProvider>
-    </StrictMode>
+      </ChakraProvider>
   )
 }
