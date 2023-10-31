@@ -26,9 +26,6 @@ export default function MyApp() {
                 <Link href="https://t.me/ananananant" isExternal>
                 <IconButton isRound={true} aria-label="1" icon={<FaTelegram/>} mr='5' />
                 </Link>
-                {/* <Link href="https://www.linkedin.com/in/anant-shanker-a960651a0/" isExternal>
-                <IconButton isRound={true} aria-label="1" icon={<FaWhatsapp/>} mr='5' />
-                </Link> */}
                 <Link href="https://www.instagram.com/_.anxnt._/" isExternal>
                 <IconButton isRound={true} aria-label="1" icon={<FaInstagram/>} mr='5' />
                 </Link>
