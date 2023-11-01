@@ -59,10 +59,39 @@ export default function ProjectInfo() {
             </Link>
             </Box>
             <Box ml={isNotSmallerScreen ? 10 : 0}>
-            <Link href="https://boundless-bazaar.vercel.app/"
+            <Tabs>
+            <TabList>
+                <Tab>Website</Tab>
+                {/* <Tab>Demo Video</Tab> */}
+                <Tab>Poster</Tab>
+            </TabList>
+            <TabPanels>
+                <TabPanel>
+                <p>
+                <Link href="https://boundless-bazaar.vercel.app/"
                 fontWeight="bold" fontSize="2xl" isExternal>
             <Image src='bb.png' borderRadius='40px' alt='boundless bazaar landing page' />
             </Link>
+                </p>
+                </TabPanel>
+                {/* <TabPanel>
+                <p>
+                <video width="3000" height="500" controls>
+                    <source src='bb_demo.mp4' type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+                </p>
+                </TabPanel> */}
+                <TabPanel>
+                <p>
+                <Link
+                fontWeight="bold" fontSize="2xl" isExternal>
+                <Image src='bb_poster.jpg' borderRadius='40px' alt='boundless bazaar poster' />
+                </Link>
+                </p>
+                </TabPanel>
+            </TabPanels>
+            </Tabs>
             </Box>
             </Flex>
             </AccordionPanel>
