@@ -1,5 +1,4 @@
 import { accordionAnatomy as parts } from "@chakra-ui/anatomy";
-import { useColorMode } from "@chakra-ui/react";
 import {
   createMultiStyleConfigHelpers,
   defineStyle,
