@@ -4,6 +4,8 @@ import { Box, Flex, Heading, Text } from '@chakra-ui/layout'
 import Icon from '@chakra-ui/icon';
 import { DiCodeigniter, DiAndroid, DiWebplatform } from 'react-icons/di'
 import ProjectInfo from '../components/projectInfo'
+import ExperienceInfo from '../components/experienceInfo'
+
 
 export default function Profile() {
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
@@ -14,7 +16,7 @@ export default function Profile() {
             case 'projects':
                 return <ProjectInfo />
             case 'experiences':
-                return <div>Experiences Content</div>;
+                return <ExperienceInfo />
             case 'skills':
                 return <div>Skills Content</div>;
             default:

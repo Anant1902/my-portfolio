@@ -23,7 +23,7 @@ export default function ProjectInfo() {
 
     return (
         <ChakraProvider theme={theme}>
-        <Accordion defaultIndex={[0]} allowMultiple allowToggle width="100%">
+        <Accordion defaultIndex={[0]} allowMultiple width="100%">
         <AccordionItem>
             <h2>
             <AccordionButton>
@@ -144,7 +144,7 @@ export default function ProjectInfo() {
         <AccordionItem>
             <h2>
             <AccordionButton>
-                <Box as="span" flex='1' textAlign='left' mr={2}>
+                <Box as="span" flex='1' textAlign='left' mr={10}>
                 Stock Sentiment Analysis
                 </Box>
                 <AccordionIcon />
