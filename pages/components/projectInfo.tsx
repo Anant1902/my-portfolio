@@ -10,8 +10,9 @@ import {
     useMediaQuery,
     Image
   } from '@chakra-ui/react'
-import { accordionTheme } from '../components/accordion'
+import { accordionTheme } from '../../styles/accordion'
 import { extendTheme, ChakraProvider, Link, Text } from "@chakra-ui/react";
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 
 export const theme = extendTheme({
 components: { Accordion: accordionTheme },
@@ -114,7 +115,7 @@ export default function ProjectInfo() {
             <Box pb='5'>
             <Text pb={10}>
             Created an AI-powered in-browser IDE for aspiring web3 developers and existing 
-            web3 developers to supercharge their workflow.	 Surf saves its intended users 
+            web3 developers to supercharge their workflow. Surf saves its intended users 
             time from prompt engineering and streamlining their workflow from debugging to deployment. 
             Learnt and familiarised with frontend React.js library Chakra UI, serverless computing 
             platform AWS Lambda, and more.
@@ -139,16 +140,68 @@ export default function ProjectInfo() {
             </Flex>
             </AccordionPanel>
         </AccordionItem>
-        {/* <AccordionItem>
-        <h2>
+
+        <AccordionItem>
+            <h2>
             <AccordionButton>
-                <Box as="span" flex='1' textAlign='left' width="100%">
-                In progress...
+                <Box as="span" flex='1' textAlign='left' mr={2}>
+                Stock Sentiment Analysis
                 </Box>
                 <AccordionIcon />
             </AccordionButton>
-        </h2>
-        </AccordionItem> */}
+            </h2>
+            <AccordionPanel pb={4}>
+            <Text fontStyle="italic" fontWeight="semibold" pb='10px'>
+            April 2020 - May 2020
+            </Text>
+            <Flex direction={isNotSmallerScreen ? 'row' : 'column'}>
+            <Box pb='5'>
+            <Text pb={10}>
+            Coded a Stock Sentiment Analysis Program that compared stock prices with 
+            social media sentiments to find existing correlation between the two. Learnt 
+            and familiarised with python libraries (such as pandas, matplotlib, tweepy, and 
+            vaderSentiment), mySQL, and the intergration of online APIs in code
+            </Text>
+            <Link href="https://github.com/Anant1902/stock-sentiment-analysis" 
+                fontWeight="bold" fontSize="2xl" isExternal>
+            Github Repository
+            </Link>
+            </Box>
+            </Flex>
+            </AccordionPanel>
+        </AccordionItem>
+
+        <AccordionItem>
+            <h2>
+            <AccordionButton>
+                <Box as="span" flex='1' textAlign='left'>
+                Flappy Bird Bot
+                </Box>
+                <AccordionIcon />
+            </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+            <Text fontStyle="italic" fontWeight="semibold" pb='10px'>
+                June 2021
+            </Text>
+            <Flex direction={isNotSmallerScreen ? 'row' : 'column'}>
+            <Box pb='5'>
+            <Text pb={10}>
+            Coded artificially intelligent birds to learn and master the game ‘Flappy Bird’.
+            Designed the game environment and used a Feed Forward Neural Network that tweaked 
+            its weights after each run of the code to improve the performance of the bird genomes.
+             Learnt and familiarised with Object Oriented Programming, python libraries (such as 
+            pygame and neat), and the working of neural networks.
+            </Text>
+            <Link href="https://github.com/Anant1902/flappy-bird-bot" 
+                fontWeight="bold" fontSize="2xl" isExternal>
+            Github Repository
+            </Link>
+            </Box>
+            </Flex>
+            </AccordionPanel>
+        </AccordionItem>
+    
         </Accordion>
         </ChakraProvider>
     )
