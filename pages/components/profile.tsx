@@ -5,6 +5,7 @@ import Icon from '@chakra-ui/icon';
 import { DiCodeigniter, DiAndroid, DiWebplatform } from 'react-icons/di'
 import ProjectInfo from '../components/projectInfo'
 import ExperienceInfo from '../components/experienceInfo'
+import SkillsInfo from '../components/skillsInfo'
 
 
 export default function Profile() {
@@ -18,7 +19,7 @@ export default function Profile() {
             case 'experiences':
                 return <ExperienceInfo />
             case 'skills':
-                return <div>Skills Content</div>;
+                return <SkillsInfo />
             default:
                 return <div>Default Content</div>;
         }
