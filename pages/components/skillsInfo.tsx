@@ -25,7 +25,7 @@ export default function SkillsInfo() {
         <Text fontSize="5xl" fontWeight="bold" mt={5}>
         Proficient in...
         </Text>
-        <Flex direction={isNotSmallerScreen ? 'row' : 'column'} mb={5}>
+        <Flex direction={isNotSmallerScreen ? 'row' : 'column'} mb={5} wrap="wrap">
             <Tag size='ml' colorScheme='yellow'>
             Python
             </Tag>
@@ -46,6 +46,9 @@ export default function SkillsInfo() {
             </Tag>
             <Tag size='ml' colorScheme='linkedin'>
             React.js
+            </Tag>
+            <Tag size='ml' colorScheme='linkedin'>
+            Tailwind CSS
             </Tag>
             <Tag size='ml' colorScheme='linkedin'>
             Express.js
@@ -69,10 +72,13 @@ export default function SkillsInfo() {
         <Text fontSize="5xl" fontWeight="bold" mt={5}>
         Getting better at...
         </Text>
-        <Flex direction={isNotSmallerScreen ? 'row' : 'column'} mb={5}>
+        <Flex direction={isNotSmallerScreen ? 'row' : 'column'} mb={5} wrap="wrap">
         <Tag size='ml' colorScheme='yellow'>
             mySQL
         </Tag>
+        <Tag size='ml' colorScheme='linkedin'>
+            Chakra UI
+            </Tag>
         <Tag size='ml' colorScheme='pink'>
             Stripe Pay
         </Tag>
@@ -84,9 +90,9 @@ export default function SkillsInfo() {
         </Tag>
         </Flex>
         <Text fontSize="5xl" fontWeight="bold" mt={5}>
-        Dabbled with...
+        Dabbled in...
         </Text>
-        <Flex direction={isNotSmallerScreen ? 'row' : 'column'} mb={5}>
+        <Flex direction={isNotSmallerScreen ? 'row' : 'column'} mb={5} wrap="wrap">
         <Tag size='ml' colorScheme='pink'>
             Firebase Auth
         </Tag>

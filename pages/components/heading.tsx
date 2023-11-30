@@ -23,7 +23,7 @@ export default function Heading() {
                         Hi! I am Anant, a Year 2 student studying Computer Science at the 
                         National University of Singapore.</Text> As an avid technology enthusiast,
                         I aim to harness my passion for technopreneurship to transform businesses and
-                        create lasting, positive impacts in the societies I work with.
+                        create lasting, positive impact in the societies I work with.
                         Inquisitive and diligent, I&apos;m someone who likes to dream big. In my free time,
                         I enjoy singing, playing the guitar, and expanding my knowledge on topics 
                         I&apos;m less familiar with!

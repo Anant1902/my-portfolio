@@ -28,7 +28,7 @@ export default function ProjectInfo() {
             <h2>
             <AccordionButton>
                 <Box as="span" flex='1' textAlign='left' width="100%" mr={10}>
-                Summer Internship, Tradesocio
+                Full Stack Development Intern, Tradesocio
                 </Box>
                 <AccordionIcon />
             </AccordionButton>
@@ -44,7 +44,8 @@ export default function ProjectInfo() {
             of text and alters it based on user preference. Created telegram, instagram, and 
             facebook company chatbot ‘ChatGilgaBot’ that interacts with, and assists users on 
             financial knowledge and travel information using pre-feeded context and
-            prompt engineering of OpenAI API&apos;s ML models.
+            prompt engineering of OpenAI API&apos;s ML models. Incorporated MySQL Database Integration
+            within the chatbot to keep track of user traffic.
             </Text>
             <Link href="https://chat-summarize-gilga.vercel.app" 
                 fontWeight="bold" fontSize="2xl" isExternal>
@@ -95,7 +96,7 @@ export default function ProjectInfo() {
             <h2>
             <AccordionButton>
                 <Box as="span" flex='1' textAlign='left' width="100%" mr={10}>
-                Student Intern, Gilgamesh Consulting
+                Data Analyst Intern, Gilgamesh Consulting
                 </Box>
                 <AccordionIcon />
             </AccordionButton>
@@ -121,7 +122,7 @@ export default function ProjectInfo() {
             <h2>
             <AccordionButton>
                 <Box as="span" flex='1' textAlign='left' width="100%" mr={10}>
-                Temporary Assistant, Allianz Consulting
+                Business Analyst, Allianz Consulting
                 </Box>
                 <AccordionIcon />
             </AccordionButton>
