@@ -32,6 +32,9 @@ export default function Heading() {
                     <Link href="https://www.linkedin.com/in/anant-shanker" isExternal>
                         <Button mt={8} colorScheme="blue">Let&apos;s connect.</Button>
                     </Link>
+                    <Link href="https://drive.google.com/file/d/1cYWWTr0KD_gIhtQiSJWchSNVjLKfDrkg/view?usp=sharing" isExternal>
+                        <Button mt={8} ml={5} colorScheme="gray">My Resume.</Button>
+                    </Link>
                 </Box>
                 <Image alignSelf="center" mt={isNotSmallerScreen ? "0" : "12"} ml={isNotSmallerScreen ? "20" : "0"}  borderRadius='full'
                         backgroundColor="transparent" boxShadow='lg' src='./pp.JPG' alt="icon" boxSize="300px" />
