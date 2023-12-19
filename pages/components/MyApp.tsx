@@ -12,10 +12,7 @@ export default function MyApp() {
         <div>
             <VStack p={10}>
                 <Flex w='100%'>
-                    <Heading size="md" fontWeight="semibold" color="cyan.400">
-                        @ananananant
-                    </Heading>
-                <Spacer></Spacer>
+                <Spacer />
 
                 <Link href="https://www.linkedin.com/in/anant-shanker-a960651a0/" isExternal>
                 <IconButton isRound={true} aria-label="1" icon={<FaLinkedin/>} mr='5' />
