@@ -5,9 +5,7 @@ import {
     AccordionPanel,
     AccordionIcon,
     Box,
-    useColorMode,
     Flex,
-    useMediaQuery,
     Image
   } from '@chakra-ui/react'
 import { accordionTheme } from '../../styles/accordion'
@@ -19,11 +17,54 @@ components: { Accordion: accordionTheme },
 })
 
 export default function ProjectInfo() {
-    const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
 
     return (
         <ChakraProvider theme={theme}>
-        <Accordion defaultIndex={[0]} allowMultiple width="100%">
+        <Accordion defaultIndex={[0, 1, 2, 3]} allowMultiple width="100%">
+
+        <AccordionItem>
+            <h2>
+            <AccordionButton>
+                <Box as="span" flex='1' textAlign='left'>
+                Surf
+                </Box>
+                <AccordionIcon />
+            </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+            <Text fontStyle="italic" fontWeight="semibold" pb='10px'>
+                December 2022 - Present
+            </Text>
+            <Flex direction={{md: 'row', base: 'column'}}>
+            <Box pb='5'>
+            <Text pb={10}>
+            Created an AI-powered in-browser IDE and Code Auditor for aspiring and existing web3 developers
+            to supercharge their smart contract development workflow. Surf saves its intended users 
+            time from prompt engineering and streamlining their workflow from debugging to deployment. 
+            Learnt and familiarised with Next.JS 13, Frontend React.js library Chakra UI, AWS Lambda, AWS API
+            Gateway, Firebase Auth, OpenAI API, Google Analytics 4.
+
+            </Text>
+            <Link href="https://bit.ly/Surf_DApp" 
+                fontWeight="bold" fontSize="2xl" isExternal>
+            Project Slide Deck
+            </Link>
+            <br />
+            <Link href="https://smartcontract.surf"
+                fontWeight="bold" fontSize="2xl" isExternal>
+            Project Website
+            </Link>
+            </Box>
+            <Box ml={{md: 10, base: 0}}>
+            <Link href="https://smartcontract.surf"
+                fontWeight="bold" fontSize="2xl" isExternal>
+            <Image src='surf_new.png' borderRadius='40px' alt='boundless bazaar landing page' />
+            </Link>
+            </Box>
+            </Flex>
+            </AccordionPanel>
+        </AccordionItem>
+
         <AccordionItem>
             <h2>
             <AccordionButton>
@@ -38,7 +79,7 @@ export default function ProjectInfo() {
             <Text fontStyle="italic" fontWeight="semibold" pb='10px'>
                 June 2023 - Present
             </Text>
-            <Flex direction={isNotSmallerScreen ? 'row' : 'column'}>
+            <Flex direction={{md: 'row', base: 'column'}}>
             <Box pb='5'>
             <Text pb={10}>
             Created a web platform that uses a  marketplace to connect buyers 
@@ -47,7 +88,7 @@ export default function ProjectInfo() {
             to monetize their trips by assisting buyers in purchasing and delivering 
             their desired items, while also enabling buyers to access unique products from 
             around the world. Learnt and familiarised with Next.js 13, Tailwind CSS, Node.js, 
-            Primsa ORM, Stripe Pay.
+            Primsa ORM, Stripe Pay, Next Auth.
             </Text>
             <Link href="https://docs.google.com/document/d/1wqOvf7xZXOROcQBBKikaxZ4znDYnS4p2" 
                 fontWeight="bold" fontSize="2xl" isExternal>
@@ -59,7 +100,7 @@ export default function ProjectInfo() {
             Project Website
             </Link>
             </Box>
-            <Box ml={isNotSmallerScreen ? 10 : 0}>
+            <Box ml={{md: 10, base: 0}}>
             <Tabs>
             <TabList>
                 <Tab>Website</Tab>
@@ -101,49 +142,6 @@ export default function ProjectInfo() {
         <AccordionItem>
             <h2>
             <AccordionButton>
-                <Box as="span" flex='1' textAlign='left'>
-                Surf
-                </Box>
-                <AccordionIcon />
-            </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-            <Text fontStyle="italic" fontWeight="semibold" pb='10px'>
-                December 2022 - Present
-            </Text>
-            <Flex direction={isNotSmallerScreen ? 'row' : 'column'}>
-            <Box pb='5'>
-            <Text pb={10}>
-            Created an AI-powered in-browser IDE for aspiring web3 developers and existing 
-            web3 developers to supercharge their workflow. Surf saves its intended users 
-            time from prompt engineering and streamlining their workflow from debugging to deployment. 
-            Learnt and familiarised with frontend React.js library Chakra UI, serverless computing 
-            platform AWS Lambda, and more.
-
-            </Text>
-            <Link href="https://bit.ly/Surf_DApp" 
-                fontWeight="bold" fontSize="2xl" isExternal>
-            Project Slide Deck
-            </Link>
-            <br />
-            <Link href="https://smartcontract.surf"
-                fontWeight="bold" fontSize="2xl" isExternal>
-            Project Website
-            </Link>
-            </Box>
-            <Box ml={isNotSmallerScreen ? 10 : 0}>
-            <Link href="https://smartcontract.surf"
-                fontWeight="bold" fontSize="2xl" isExternal>
-            <Image src='surf.png' borderRadius='40px' alt='boundless bazaar landing page' />
-            </Link>
-            </Box>
-            </Flex>
-            </AccordionPanel>
-        </AccordionItem>
-
-        <AccordionItem>
-            <h2>
-            <AccordionButton>
                 <Box as="span" flex='1' textAlign='left' mr={10}>
                 Stock Sentiment Analysis
                 </Box>
@@ -154,7 +152,7 @@ export default function ProjectInfo() {
             <Text fontStyle="italic" fontWeight="semibold" pb='10px'>
             April 2020 - May 2020
             </Text>
-            <Flex direction={isNotSmallerScreen ? 'row' : 'column'}>
+            <Flex direction={{md: 'row', base: 'column'}}>
             <Box pb='5'>
             <Text pb={10}>
             Coded a Stock Sentiment Analysis Program that compared stock prices with 
@@ -184,7 +182,7 @@ export default function ProjectInfo() {
             <Text fontStyle="italic" fontWeight="semibold" pb='10px'>
                 June 2021
             </Text>
-            <Flex direction={isNotSmallerScreen ? 'row' : 'column'}>
+            <Flex direction={{md: 'row', base: 'column'}}>
             <Box pb='5'>
             <Text pb={10}>
             Coded artificially intelligent birds to learn and master the game ‘Flappy Bird’.

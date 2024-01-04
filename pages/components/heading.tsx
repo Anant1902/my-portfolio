@@ -1,21 +1,19 @@
 import { Button } from "@chakra-ui/button";
 import { useColorMode } from "@chakra-ui/color-mode"
 import { Box, Flex, Stack, Text} from "@chakra-ui/layout";
-import { useMediaQuery } from "@chakra-ui/media-query";
 import { Image, Link } from "@chakra-ui/react";
 
 export default function Heading() {
 
     const { colorMode } = useColorMode();
     const isDark = colorMode === "dark"
-    const [isNotSmallerScreen] = useMediaQuery("(min-width:600px");
 
     return ( 
         <Stack>
-            <Flex direction={isNotSmallerScreen ? "row" : "column"} width="full"
-                p={isNotSmallerScreen ? "32" :"0"}
+            <Flex direction={{md: "row", base: "column"}} width="full"
+                p={{md: "32", base: "0"}}
                 alignSelf="flex-start">
-                <Box mt={isNotSmallerScreen ? "0" : 16} alignContent='flex-start' width={isNotSmallerScreen ? '60%' : '100%'}>
+                <Box mt={{md: "0", base: '16'}} alignContent='flex-start' width={{md: '60%', base: '100%'}}>
                     <Text fontSize="7xl" fontWeight="semibold" bgGradient="linear(to-r, cyan.400, blue.500, purple.600)" bgClip="text">Anant Shanker</Text>
                     {/* <Text color={isDark ? "gray.200" : "gray.500"}>Year 2 Computer Science student at NUS</Text> */}
                     <Text fontSize="2xl">
@@ -32,11 +30,11 @@ export default function Heading() {
                     <Link href="https://www.linkedin.com/in/anant-shanker" isExternal>
                         <Button mt={8} colorScheme="blue">Let&apos;s connect.</Button>
                     </Link>
-                    <Link href="https://drive.google.com/file/d/1cYWWTr0KD_gIhtQiSJWchSNVjLKfDrkg/view?usp=sharing" isExternal>
+                    <Link href="https://drive.google.com/file/d/139bcwkTROPc2jW1BapNwRetc6uuwuGTE/view?usp=sharing" isExternal>
                         <Button mt={8} ml={5} colorScheme="gray">My Resume.</Button>
                     </Link>
                 </Box>
-                <Image alignSelf="center" mt={isNotSmallerScreen ? "0" : "12"} ml={isNotSmallerScreen ? "20" : "0"}  borderRadius='full'
+                <Image alignSelf="center" mt={{md: "0", base: "12"}} ml={{md: "20", base: "0"}}  borderRadius='full'
                         backgroundColor="transparent" boxShadow='lg' src='./pp.JPG' alt="icon" boxSize="300px" />
             </Flex>
         </Stack>

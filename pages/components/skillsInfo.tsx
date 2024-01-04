@@ -9,7 +9,7 @@ import {
     ChakraProvider,
     Text,
     Flex,
-    useMediaQuery
+    Box
   } from '@chakra-ui/react'
 import { tagTheme } from '../../styles/tag'
 
@@ -18,19 +18,21 @@ export const theme = extendTheme({
     })
 
 export default function SkillsInfo() {
-    const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
 
     return (
         <ChakraProvider theme={theme}>
         <Text fontSize="5xl" fontWeight="bold" mt={5}>
         Proficient in...
         </Text>
-        <Flex direction={isNotSmallerScreen ? 'row' : 'column'} mb={5} wrap="wrap">
+        <Box mb={5}>
             <Tag size='ml' colorScheme='yellow'>
             Python
             </Tag>
             <Tag size='ml' colorScheme='yellow'>
             Javascript
+            </Tag>
+            <Tag size='ml' colorScheme='yellow'>
+            Typescript  
             </Tag>
             <Tag size='ml' colorScheme='yellow'>
             Java
@@ -48,9 +50,6 @@ export default function SkillsInfo() {
             React.js
             </Tag>
             <Tag size='ml' colorScheme='linkedin'>
-            Tailwind CSS
-            </Tag>
-            <Tag size='ml' colorScheme='linkedin'>
             Express.js
             </Tag>
             <Tag size='ml' colorScheme='linkedin'>
@@ -58,6 +57,15 @@ export default function SkillsInfo() {
             </Tag>
             <Tag size='ml' colorScheme='linkedin'>
             REST API
+            </Tag>
+            <Tag size='ml' colorScheme='linkedin'>
+            Tailwind CSS
+            </Tag>
+            <Tag size='ml' colorScheme='linkedin'>
+            ChakraUI
+            </Tag>
+            <Tag size='ml' colorScheme='linkedin'>
+            MantineUI
             </Tag>
             <Tag size='ml' colorScheme='pink'>
             OpenAI API
@@ -68,17 +76,29 @@ export default function SkillsInfo() {
             <Tag size='ml' colorScheme='pink'>
             Git
             </Tag>
-        </Flex>
+            <Tag size='ml' colorScheme='pink'>
+            Firebase Auth
+            </Tag>
+            <Tag size='ml' colorScheme='pink'>
+            Google Analytics 4
+            </Tag>
+            <Tag size='ml' colorScheme='pink'>
+            Numpy
+            </Tag>
+            <Tag size='ml' colorScheme='pink'>
+            Pytorch
+            </Tag>
+        </Box>
         <Text fontSize="5xl" fontWeight="bold" mt={5}>
         Getting better at...
         </Text>
-        <Flex direction={isNotSmallerScreen ? 'row' : 'column'} mb={5} wrap="wrap">
+        <Box mb={5}>
         <Tag size='ml' colorScheme='yellow'>
             mySQL
         </Tag>
         <Tag size='ml' colorScheme='linkedin'>
-            Chakra UI
-            </Tag>
+            Vite.JS
+        </Tag>
         <Tag size='ml' colorScheme='pink'>
             Stripe Pay
         </Tag>
@@ -88,16 +108,25 @@ export default function SkillsInfo() {
         <Tag size='ml' colorScheme='pink'>
             AWS Lambda
         </Tag>
-        </Flex>
+        <Tag size='ml' colorScheme='pink'>
+            Figma
+        </Tag>
+        <Tag size='ml' colorScheme='pink'>
+            Tableu
+        </Tag>
+        </Box>
         <Text fontSize="5xl" fontWeight="bold" mt={5}>
         Dabbled in...
         </Text>
-        <Flex direction={isNotSmallerScreen ? 'row' : 'column'} mb={5} wrap="wrap">
-        <Tag size='ml' colorScheme='pink'>
-            Firebase Auth
+        <Box mb={5}>
+        <Tag size='ml' colorScheme='yellow'>
+            Golang
         </Tag>
-        </Flex>
-
+        <Tag size='ml' colorScheme='pink'>
+            Docker
+        </Tag>
+        
+        </Box>
         </ChakraProvider>
     )
 }  
