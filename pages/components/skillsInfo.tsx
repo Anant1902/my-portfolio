@@ -38,7 +38,7 @@ export default function SkillsInfo() {
             Java
             </Tag>
             <Tag size='ml' colorScheme='yellow'>
-            Source
+            mySQL
             </Tag>
             <Tag size='ml' colorScheme='yellow'>
             C
@@ -80,6 +80,15 @@ export default function SkillsInfo() {
             Firebase Auth
             </Tag>
             <Tag size='ml' colorScheme='pink'>
+            AWS Lambda
+            </Tag>
+            <Tag size='ml' colorScheme='pink'>
+            Azure OpenAI Service
+            </Tag>
+            <Tag size='ml' colorScheme='pink'>
+            Azure AI Language
+            </Tag>
+            <Tag size='ml' colorScheme='pink'>
             Google Analytics 4
             </Tag>
             <Tag size='ml' colorScheme='pink'>
@@ -93,9 +102,6 @@ export default function SkillsInfo() {
         Getting better at...
         </Text>
         <Box mb={5}>
-        <Tag size='ml' colorScheme='yellow'>
-            mySQL
-        </Tag>
         <Tag size='ml' colorScheme='linkedin'>
             Vite.JS
         </Tag>
@@ -103,10 +109,10 @@ export default function SkillsInfo() {
             Stripe Pay
         </Tag>
         <Tag size='ml' colorScheme='pink'>
-            AWS EC2
+            Azure AI Search
         </Tag>
         <Tag size='ml' colorScheme='pink'>
-            AWS Lambda
+            AWS EC2
         </Tag>
         <Tag size='ml' colorScheme='pink'>
             Figma
@@ -125,7 +131,9 @@ export default function SkillsInfo() {
         <Tag size='ml' colorScheme='pink'>
             Docker
         </Tag>
-        
+        <Tag size='ml' colorScheme='pink'>
+            AWS SageMaker
+        </Tag>
         </Box>
         </ChakraProvider>
     )

@@ -138,7 +138,35 @@ export default function ProjectInfo() {
             </Flex>
             </AccordionPanel>
         </AccordionItem>
+        <AccordionItem>
+            <h2>
+            <AccordionButton>
+                <Box as="span" flex='1' textAlign='left' width="100%" mr={10}>
+                Software Developer, Rep Tech
+                </Box>
+                <AccordionIcon />
+            </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+            <Text fontStyle="italic" fontWeight="semibold" pb='10px'>
+                September 2023 - Present (Part Time)
+            </Text>
+            <Flex direction={{md: 'row', base: 'column'}}>
+            <Box pb='5'>
+            <Text pb={10}>
+            Created and integrated authentication for an early-stage health tech startup.
+            Collaborated with UI/UX Designers and other software developers to create the website frontend.
+            Technologies used: Vite.JS, Mantine UI, Firebase Auth, Docker.
 
+            </Text>
+            <br />
+            </Box>
+            <Box ml={{md: 10, base: 0}}>
+            <Image w='2000px' src='rep_auth.png' borderRadius='40px' alt='boundless bazaar landing page' />
+            </Box>
+            </Flex>
+            </AccordionPanel>
+        </AccordionItem>
         <AccordionItem>
             <h2>
             <AccordionButton>

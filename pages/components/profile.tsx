@@ -37,16 +37,16 @@ export default function Profile() {
             <Box alignSelf="center" py="16">
                 <Text fontWeight="bold" fontSize="2xl">More about me.</Text>
                 <Flex direction={isNotSmallerScreen ? "row" : "column"} mt={8} >
-                    <Flex onClick={() => setActiveTab('projects')} rounded="xl" direction="column" mt={4}
-                    bg={activeTab == 'projects' ? "blue.400" : "gray.100"} h="30vh" w="30vh" _hover={{ bg: "blue.400", }} justify="flex-end">
-                        <Text color={activeTab == 'projects' ? "white" : "black"} p="4" fontSize="xl" fontWeight="semibold">
-                            Projects
-                        </Text>
-                    </Flex>
-                    <Flex onClick={() => setActiveTab('experiences')} rounded="xl" direction="column" mt={4} ml={isNotSmallerScreen ? 4 : 0}
-                        bg={activeTab == 'experiences' ? "teal.400" : "gray.100"} h="30vh" w="30vh" justify="flex-end" _hover={{ bg: "teal.400", }}>
+                    <Flex onClick={() => setActiveTab('experiences')} rounded="xl" direction="column" mt={4}
+                        bg={activeTab == 'experiences' ? "blue.400" : "gray.100"} h="30vh" w="30vh" justify="flex-end" _hover={{ bg: "blue.400", }}>
                         <Text color={activeTab == 'experiences' ? "white" : "black"} p="4" fontSize="xl" fontWeight="semibold">
                             Experiences
+                        </Text>
+                    </Flex>
+                    <Flex onClick={() => setActiveTab('projects')} rounded="xl" direction="column" mt={4} ml={isNotSmallerScreen ? 4 : 0}
+                    bg={activeTab == 'projects' ? "teal.400" : "gray.100"} h="30vh" w="30vh" _hover={{ bg: "teal.400", }} justify="flex-end">
+                        <Text color={activeTab == 'projects' ? "white" : "black"} p="4" fontSize="xl" fontWeight="semibold">
+                            Projects
                         </Text>
                     </Flex>
                     <Flex onClick={() => setActiveTab('skills')} rounded="xl" direction="column" mt={4} ml={isNotSmallerScreen ? 4 : 0}

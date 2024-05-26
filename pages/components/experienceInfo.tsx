@@ -25,27 +25,57 @@ export default function ProjectInfo() {
             <h2>
             <AccordionButton>
                 <Box as="span" flex='1' textAlign='left' width="100%" mr={10}>
-                Software Developer, Rep Tech
+                Software Engineering Intern, GovTech Singapore
                 </Box>
                 <AccordionIcon />
             </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
             <Text fontStyle="italic" fontWeight="semibold" pb='10px'>
-                September 2023 - Present (Part Time)
+                May 2024 - December 2024
             </Text>
             <Flex direction={{md: 'row', base: 'column'}}>
-            <Box pb='5'>
+            <Box pb='5' width='150%'>
             <Text pb={10}>
-            Created and integrated authentication for an early-stage health tech startup.
-            Collaborated with UI/UX Designers and other software developers to create the website frontend.
-            Technologies used: Vite.JS, Mantine UI, Firebase Auth, Docker.
-
+            Working with the Video Analytics team at DSAID to create a Digital Asset Management system.
             </Text>
             <br />
             </Box>
             <Box ml={{md: 10, base: 0}}>
-            <Image w='2000px' src='rep_auth.png' borderRadius='40px' alt='boundless bazaar landing page' />
+            {/* <Image src='ibo_chatbot.png' borderRadius='40px' alt='boundless bazaar landing page' /> */}
+            {/* </Link> */}
+            </Box>
+            </Flex>
+            </AccordionPanel>
+        </AccordionItem>
+        <AccordionItem>
+            <h2>
+            <AccordionButton>
+                <Box as="span" flex='1' textAlign='left' width="100%" mr={10}>
+                Data AI Intern, International Baccalaureate
+                </Box>
+                <AccordionIcon />
+            </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+            <Text fontStyle="italic" fontWeight="semibold" pb='10px'>
+                January 2024 - May 2024 (Part Time)
+            </Text>
+            <Flex direction={{md: 'row', base: 'column'}}>
+            <Box pb='5' width='150%'>
+            <Text pb={10}>
+            Created an AI-powered chatbot for internal stakeholders to better access educational resources.
+            Worked with enterprise Cloud AI microservices on Microsoft Azure such as OpenAI Studio,
+            Conversational Language Understanding, QnA, and Language Orchestration Studio.
+            Worked with a Python based backend framework – Quart and React.JS to integrate these
+            microservices and develop a domain-specific chatbot.
+            </Text>
+            <br />
+           
+            </Box>
+            <Box ml={{md: 10, base: 0}}>
+            <Image src='ibo_chatbot.png' borderRadius='40px' alt='boundless bazaar landing page' />
+            {/* </Link> */}
             </Box>
             </Flex>
             </AccordionPanel>
