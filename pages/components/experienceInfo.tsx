@@ -84,7 +84,7 @@ export default function ProjectInfo() {
             <h2>
             <AccordionButton>
                 <Box as="span" flex='1' textAlign='left' width="100%" mr={10}>
-                Full Stack Development Intern, Tradesocio
+                Software Engineering Intern, Tradesocio
                 </Box>
                 <AccordionIcon />
             </AccordionButton>

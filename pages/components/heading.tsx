@@ -30,7 +30,7 @@ export default function Heading() {
                     <Link href="https://www.linkedin.com/in/anant-shanker" isExternal>
                         <Button mt={8} colorScheme="blue">Let&apos;s connect.</Button>
                     </Link>
-                    <Link href="https://drive.google.com/file/d/1ubcn_9sXXWKN6fQiBxwcVUasfIOfO5-U/view?usp=sharing" isExternal>
+                    <Link href="https://drive.google.com/file/d/1BI9J4YW3R726g13bf-YbMZ6pT6Ftflwr/view?usp=sharing" isExternal>
                         <Button mt={8} ml={5} colorScheme="gray">My Resume.</Button>
                     </Link>
                 </Box>

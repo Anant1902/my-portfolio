@@ -10,7 +10,7 @@ import SkillsInfo from '../components/skillsInfo'
 
 export default function Profile() {
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
-    const [activeTab, setActiveTab] = useState('projects');  // default to 'projects'
+    const [activeTab, setActiveTab] = useState('experiences');  // default to 'projects'
 
     const renderContent = () => {
         switch (activeTab) {
