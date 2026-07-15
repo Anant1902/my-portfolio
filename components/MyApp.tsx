@@ -23,8 +23,6 @@ export default function MyApp() {
         "linear(to-b, ocean.700, ocean.800, gray.900)"
     );
     const pageBaseBg = useColorModeValue("ocean.100", "gray.900");
-    const navBg = useColorModeValue("rgba(255, 255, 255, 0.84)", "rgba(8, 29, 39, 0.82)");
-    const borderColor = useColorModeValue("ocean.100", "whiteAlpha.200");
 
     return(
         <Box
@@ -37,16 +35,12 @@ export default function MyApp() {
             <VStack spacing={0} align="stretch">
                 <Flex
                     as="nav"
-                    position="sticky"
-                    top="0"
-                    zIndex="10"
                     w="100%"
+                    maxW="1180px"
+                    mx="auto"
                     px={{ base: 5, md: 10 }}
-                    py={4}
-                    bg={navBg}
-                    borderBottom="1px solid"
-                    borderColor={borderColor}
-                    backdropFilter="blur(16px)"
+                    pt={{ base: 4, md: 6 }}
+                    pb={0}
                 >
                     <Spacer />
                     <HStack spacing={2} overflowX="auto" maxW="100%" py={1}>
@@ -66,9 +60,7 @@ export default function MyApp() {
                             </Link>
                         </Tooltip>
                         <Link href="https://drive.google.com/file/d/1BI9J4YW3R726g13bf-YbMZ6pT6Ftflwr/view?usp=sharing" isExternal>
-                            <Button leftIcon={<FaFileAlt/>} colorScheme="ocean" variant="outline" size={{ base: "sm", md: "md" }}>
-                                Resume
-                            </Button>
+                            <IconButton variant="ghost" aria-label="Resume" icon={<FaFileAlt/>} />
                         </Link>
                         <IconButton
                             variant="ghost"

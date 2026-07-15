@@ -7,11 +7,12 @@ export default function Heading() {
     const muted = useColorModeValue("gray.700", "ocean.100");
     const panelBg = useColorModeValue("rgba(255, 255, 255, 0.78)", "whiteAlpha.100");
     const borderColor = useColorModeValue("ocean.100", "whiteAlpha.200");
+    const nameColor = useColorModeValue("ocean.700", "white");
 
-    return ( 
-        <Stack w="100%" maxW="1180px" mx="auto" px={{ base: 5, md: 10 }} py={{ base: 12, md: 20 }}>
-            <Flex direction={{ md: "row", base: "column" }} width="full" gap={{ base: 10, md: 16 }} align="center">
-                <VStack align="flex-start" spacing={7} flex="1">
+    return (
+        <Stack w="100%" maxW="1180px" mx="auto" px={{ base: 5, md: 10 }} pt={{ base: 8, md: 10 }} pb={{ base: 12, md: 16 }}>
+            <Flex direction={{ md: "row", base: "column" }} width="full" gap={{ base: 8, md: 12 }} align="center">
+                <VStack align="flex-start" spacing={5} flex="1">
                     <HStack spacing={3} flexWrap="wrap">
                         <Badge colorScheme="ocean" px={3} py={1} borderRadius="full">NUS Computer Science</Badge>
                         <Badge colorScheme="palm" px={3} py={1} borderRadius="full">Singaporean</Badge>
@@ -25,8 +26,7 @@ export default function Heading() {
                             lineHeight="1"
                             fontWeight="800"
                             letterSpacing="0"
-                            bgGradient="linear(to-r, ocean.700, lagoon.500, palm.500)"
-                            bgClip="text"
+                            color={nameColor}
                         >
                             Anant Shanker
                         </Text>
@@ -48,13 +48,12 @@ export default function Heading() {
                         Singapore, International Baccalaureate, and Tradesocio, where I built scalable APIs, AI
                         interfaces, data workflows, and production systems with strong testing habits.
                     </Text>
-
                     <Text color={muted} fontSize={{ base: "md", md: "lg" }} maxW="740px" lineHeight="1.8">
                         Outside of engineering, you will usually find me playing tennis, jamming, or learning about
                         topics I know little about.
                     </Text>
 
-                    <HStack spacing={4} flexWrap="wrap">
+                    <HStack spacing={3} flexWrap="wrap">
                         <Link href="https://www.linkedin.com/in/anant-shanker/" isExternal>
                             <Button rightIcon={<FaArrowRight/>} colorScheme="ocean">Connect on LinkedIn</Button>
                         </Link>
@@ -77,8 +76,8 @@ export default function Heading() {
                         borderColor={borderColor}
                         src="./anant-shanker-coast-profile.jpg"
                         alt="Anant Shanker"
-                        w={{ base: "250px", md: "340px" }}
-                        h={{ base: "330px", md: "440px" }}
+                        w={{ base: "240px", md: "310px" }}
+                        h={{ base: "310px", md: "390px" }}
                         objectFit="cover"
                         objectPosition="52% 65%"
                     />

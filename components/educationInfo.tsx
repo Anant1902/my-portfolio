@@ -140,6 +140,11 @@ export default function EducationInfo() {
                 <Text color={muted} mt={3}>
                     Awarded by the National University of Singapore for strong performance in Digital Platforms for Business.
                 </Text>
+                <Link href="https://credentials.nus.edu.sg/bcb87ec7-0652-4eef-b445-2b55a9653853#acc.Wg8mvJIq" isExternal>
+                    <Button mt={4} size="sm" colorScheme="ocean" variant="outline" leftIcon={<FaExternalLinkAlt/>}>
+                        View credential
+                    </Button>
+                </Link>
             </Box>
 
             <Box>
