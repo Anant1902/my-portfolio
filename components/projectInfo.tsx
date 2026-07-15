@@ -79,9 +79,9 @@ const projects = [
 ];
 
 export default function ProjectInfo() {
-    const cardBg = useColorModeValue("rgba(255, 255, 255, 0.78)", "whiteAlpha.100");
-    const borderColor = useColorModeValue("ocean.100", "whiteAlpha.200");
-    const muted = useColorModeValue("gray.700", "ocean.100");
+    const cardBg = useColorModeValue("white", "whiteAlpha.100");
+    const borderColor = useColorModeValue("gray.200", "whiteAlpha.200");
+    const muted = useColorModeValue("gray.600", "ocean.100");
 
     return (
         <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={5}>

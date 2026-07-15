@@ -60,7 +60,7 @@ const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: 'ocean.50',
+        bg: 'ocean.100',
       },
     },
   },

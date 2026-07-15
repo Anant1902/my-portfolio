@@ -4,9 +4,9 @@ import { Badge, Image, Link, useColorModeValue } from "@chakra-ui/react";
 import { FaArrowRight, FaEnvelope, FaGithub } from "react-icons/fa";
 
 export default function Heading() {
-    const muted = useColorModeValue("gray.700", "ocean.100");
-    const panelBg = useColorModeValue("rgba(255, 255, 255, 0.78)", "whiteAlpha.100");
-    const borderColor = useColorModeValue("ocean.100", "whiteAlpha.200");
+    const muted = useColorModeValue("gray.600", "ocean.100");
+    const panelBg = useColorModeValue("white", "whiteAlpha.100");
+    const borderColor = useColorModeValue("gray.200", "whiteAlpha.200");
     const nameColor = useColorModeValue("ocean.700", "white");
 
     return (
@@ -30,24 +30,19 @@ export default function Heading() {
                         >
                             Anant Shanker
                         </Text>
-                        <Text
-                            mt={4}
-                            fontSize={{ base: "xl", md: "2xl" }}
-                            color={muted}
-                            maxW="760px"
-                            lineHeight="1.45"
-                        >
-                            Recent NUS Computer Science graduate passionate about high-quality code, systems,
-                            AI, and building useful technology with thoughtful teams.
-                        </Text>
                     </Box>
 
                     <Text color={muted} fontSize={{ base: "md", md: "lg" }} maxW="740px" lineHeight="1.8">
-                        I enjoy working on complex problems, creating cool tech, collaborating with people, and
-                        positively impacting the teams I work with. My experience spans JPMorgan Chase, GovTech
-                        Singapore, International Baccalaureate, and Tradesocio, where I built scalable APIs, AI
-                        interfaces, data workflows, and production systems with strong testing habits.
+                        Hey! I am Anant, a recent CS undergraduate from NUS. I am passionate about high-quality code,
+                        systems, AI, and all other things tech. I enjoy working on complex problems, creating cool
+                        tech, collaborating with people, and positively impacting the teams I work with.
+                        <br />
+                        My experience
+                        spans JPMorgan Chase, GovTech Singapore, International Baccalaureate, and Tradesocio, where I
+                        built scalable APIs, AI interfaces, data workflows, and production systems with strong testing
+                        habits.
                     </Text>
+
                     <Text color={muted} fontSize={{ base: "md", md: "lg" }} maxW="740px" lineHeight="1.8">
                         Outside of engineering, you will usually find me playing tennis, jamming, or learning about
                         topics I know little about.
@@ -83,27 +78,6 @@ export default function Heading() {
                     />
                 </Box>
             </Flex>
-
-            <SimpleGrid columns={{ base: 1, md: 4 }} spacing={4} pt={{ base: 6, md: 10 }}>
-                {[
-                    ["4.50/5.00", "NUS Computer Science GPA"],
-                    ["5,000+", "Ops users supported by JPMorgan AI tooling"],
-                    ["5M+", "Digital assets improved through metadata search"],
-                    ["90%+", "Line coverage on production GovTech services"],
-                ].map(([value, label]) => (
-                    <Box
-                        key={label}
-                        p={5}
-                        bg={panelBg}
-                        border="1px solid"
-                        borderColor={borderColor}
-                        borderRadius="8px"
-                    >
-                        <Text fontSize="2xl" fontWeight="800">{value}</Text>
-                        <Text mt={1} color={muted} fontSize="sm">{label}</Text>
-                    </Box>
-                ))}
-            </SimpleGrid>
         </Stack>
     )
 }

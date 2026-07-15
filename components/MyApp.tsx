@@ -1,6 +1,5 @@
 import {
     Box,
-    Button,
     Flex,
     HStack,
     IconButton,
@@ -11,6 +10,7 @@ import {
     useColorModeValue,
     VStack
 } from "@chakra-ui/react";
+import { useEffect, useRef, useState } from "react";
 import { FaFileAlt, FaGithub, FaLinkedin, FaMoon, FaSun, FaEnvelope } from 'react-icons/fa'
 import Head from './heading'
 import Profile from './profile'
@@ -18,22 +18,54 @@ import Profile from './profile'
 export default function MyApp() {
     const {colorMode, toggleColorMode } = useColorMode();
     const isDark = colorMode === 'dark';
-    const pageBg = useColorModeValue(
-        "linear(to-b, white, ocean.50, ocean.100)",
-        "linear(to-b, ocean.700, ocean.800, gray.900)"
+    const pageBg = useColorModeValue("ocean.100", "gray.900");
+    const pageGradient = useColorModeValue(
+        "linear(to-b, white 0%, ocean.50 42%, ocean.100 100vh)",
+        "linear(to-b, ocean.700 0%, ocean.800 48%, gray.900 100vh)"
     );
-    const pageBaseBg = useColorModeValue("ocean.100", "gray.900");
+    const navRef = useRef<HTMLDivElement | null>(null);
+    const heroRef = useRef<HTMLDivElement | null>(null);
+    const profilePreviewRef = useRef<HTMLDivElement | null>(null);
+    const [profileOffset, setProfileOffset] = useState(0);
+
+    useEffect(() => {
+        const previewBuffer = 32;
+
+        const updateProfileOffset = () => {
+            const viewportHeight = window.innerHeight;
+            const navHeight = navRef.current?.offsetHeight ?? 0;
+            const heroHeight = heroRef.current?.offsetHeight ?? 0;
+            const previewHeight = profilePreviewRef.current?.offsetHeight ?? 0;
+            const landingHeight = navHeight + heroHeight;
+            const remainingFirstViewport = viewportHeight - landingHeight;
+
+            if (remainingFirstViewport >= previewHeight + previewBuffer || landingHeight >= viewportHeight) {
+                setProfileOffset(0);
+                return;
+            }
+
+            setProfileOffset(Math.max(0, remainingFirstViewport));
+        };
+
+        updateProfileOffset();
+        window.addEventListener("resize", updateProfileOffset);
+
+        const observer = new ResizeObserver(updateProfileOffset);
+        if (navRef.current) observer.observe(navRef.current);
+        if (heroRef.current) observer.observe(heroRef.current);
+        if (profilePreviewRef.current) observer.observe(profilePreviewRef.current);
+
+        return () => {
+            window.removeEventListener("resize", updateProfileOffset);
+            observer.disconnect();
+        };
+    }, []);
 
     return(
-        <Box
-            minH="100vh"
-            bg={pageBaseBg}
-            bgGradient={pageBg}
-            bgSize="100% 100vh"
-            bgRepeat="no-repeat"
-        >
+        <Box minH="100vh" bg={pageBg} bgGradient={pageGradient} bgSize="100% 100vh" bgRepeat="no-repeat">
             <VStack spacing={0} align="stretch">
                 <Flex
+                    ref={navRef}
                     as="nav"
                     w="100%"
                     maxW="1180px"
@@ -70,8 +102,10 @@ export default function MyApp() {
                         />
                     </HStack>
                 </Flex>
-                <Head />
-                <Profile />
+                <Box ref={heroRef}>
+                    <Head />
+                </Box>
+                <Profile topOffset={profileOffset} previewRef={profilePreviewRef} />
             </VStack>
         </Box>
     )
